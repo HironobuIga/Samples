@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEo-NV-zx8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mJ2-Ts-Xq7">
+            <objects>
+                <navigationController id="gEo-NV-zx8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q34-Dy-OTK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lnM-Sf-mYP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkD-xS-J7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="134"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出力結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dr-Ue-beC">
-                                <rect key="frame" x="30" y="108" width="315" height="120"/>
+                                <rect key="frame" x="30" y="152" width="315" height="120"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="OTI-oC-o8p"/>
@@ -29,7 +45,7 @@
                                 <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="テキスト入力" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-Qy-tMg">
-                                <rect key="frame" x="30" y="250" width="315" height="90"/>
+                                <rect key="frame" x="30" y="294" width="315" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="O5W-v8-ZRa"/>
                                 </constraints>
@@ -37,26 +53,55 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUK-G7-3uT">
+                                <rect key="frame" x="0.0" y="404" width="375" height="243"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addingNumber" textLabel="95o-Ga-jaS" style="IBUITableViewCellStyleDefault" id="PUv-Rc-nag">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PUv-Rc-nag" id="reP-ud-tc7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Adding Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="95o-Ga-jaS">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="NUK-G7-3uT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="17t-ZT-iip"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NUK-G7-3uT" secondAttribute="trailing" id="2cR-7k-Knn"/>
                             <constraint firstItem="bm3-Qy-tMg" firstAttribute="top" secondItem="0dr-Ue-beC" secondAttribute="bottom" constant="22" id="3qU-wg-fGf"/>
                             <constraint firstItem="0dr-Ue-beC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="JcI-PY-WYc"/>
+                            <constraint firstItem="NUK-G7-3uT" firstAttribute="top" secondItem="bm3-Qy-tMg" secondAttribute="bottom" constant="20" id="OAO-V7-vrz"/>
                             <constraint firstItem="bm3-Qy-tMg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Pmi-q0-mPg"/>
                             <constraint firstItem="0dr-Ue-beC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Vga-vk-Cwu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bm3-Qy-tMg" secondAttribute="trailing" constant="30" id="lzX-ZE-mOX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NUK-G7-3uT" secondAttribute="bottom" constant="20" id="s9k-cS-z7F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0dr-Ue-beC" secondAttribute="trailing" constant="30" id="yzj-6n-b14"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OHg-uJ-SMG"/>
                     <connections>
                         <outlet property="inputTextField" destination="bm3-Qy-tMg" id="E4w-eZ-yCH"/>
                         <outlet property="label" destination="0dr-Ue-beC" id="M9b-UM-bgC"/>
+                        <outlet property="tableView" destination="NUK-G7-3uT" id="Bbh-P1-zZz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+            <point key="canvasLocation" x="277.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
