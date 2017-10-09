@@ -12,6 +12,7 @@ import RxCocoa
 
 enum CellIdentifier: String {
     case addingNumber = "addingNumber"
+    case simpleValidation = "simpleValidation"
 }
 
 class ViewController: UIViewController {
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    let order: [CellIdentifier] = [.addingNumber]
+    let order: [CellIdentifier] = [.addingNumber, .simpleValidation]
     
     let disposeBag = DisposeBag()
     
@@ -44,6 +45,10 @@ extension ViewController: UITableViewDelegate {
         if indexPath.row == 0 {
             let sb = UIStoryboard(name: "AddingNumberViewController", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: "AddingNumberViewController") as? AddingNumberViewController else { return }
+            navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 1 {
+            let sb = UIStoryboard(name: "SimpleValidationViewController", bundle: nil)
+            guard let vc = sb.instantiateViewController(withIdentifier: "SimpleValidationViewController") as? SimpleValidationViewController else { return }
             navigationController?.pushViewController(vc, animated: true)
         }
     }
