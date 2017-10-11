@@ -13,8 +13,8 @@
         <scene sceneID="mJ2-Ts-Xq7">
             <objects>
                 <navigationController id="gEo-NV-zx8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q34-Dy-OTK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="q34-Dy-OTK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -25,16 +25,16 @@
             </objects>
             <point key="canvasLocation" x="-748" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--TOP画面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RXSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TOP画面" id="BYZ-38-t0r" customClass="ViewController" customModule="RXSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出力結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dr-Ue-beC">
-                                <rect key="frame" x="30" y="152" width="315" height="120"/>
+                                <rect key="frame" x="30" y="204" width="315" height="120"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="OTI-oC-o8p"/>
@@ -45,7 +45,7 @@
                                 <color key="shadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="テキスト入力" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-Qy-tMg">
-                                <rect key="frame" x="30" y="294" width="315" height="90"/>
+                                <rect key="frame" x="30" y="346" width="315" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="O5W-v8-ZRa"/>
                                 </constraints>
@@ -54,7 +54,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUK-G7-3uT">
-                                <rect key="frame" x="0.0" y="404" width="375" height="243"/>
+                                <rect key="frame" x="0.0" y="456" width="375" height="191"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addingNumber" textLabel="95o-Ga-jaS" style="IBUITableViewCellStyleDefault" id="PUv-Rc-nag">
@@ -109,7 +109,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OHg-uJ-SMG"/>
+                    <navigationItem key="navigationItem" title="Top画面" id="OHg-uJ-SMG"/>
                     <connections>
                         <outlet property="inputTextField" destination="bm3-Qy-tMg" id="E4w-eZ-yCH"/>
                         <outlet property="label" destination="0dr-Ue-beC" id="M9b-UM-bgC"/>

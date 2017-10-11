@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Adding Number View Controller-->
+        <!--NumberAdding-->
         <scene sceneID="v8M-un-zvC">
             <objects>
-                <viewController storyboardIdentifier="AddingNumberViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t7Z-eU-qgs" customClass="AddingNumberViewController" customModule="RXSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddingNumberViewController" title="NumberAdding" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t7Z-eU-qgs" customClass="AddingNumberViewController" customModule="RXSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pjv-pc-Hiq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Simple Validation View Controller-->
+        <!--SimpleValidation-->
         <scene sceneID="gt2-iU-Kpi">
             <objects>
-                <viewController storyboardIdentifier="SimpleValidationViewController" id="Pkz-Fz-z5d" customClass="SimpleValidationViewController" customModule="RXSwiftSample" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SimpleValidationViewController" title="SimpleValidation" id="Pkz-Fz-z5d" customClass="SimpleValidationViewController" customModule="RXSwiftSample" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KBN-FU-dZy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
