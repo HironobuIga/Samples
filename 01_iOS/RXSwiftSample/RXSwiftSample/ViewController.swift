@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationItem.largeTitleDisplayMode = .never
         
         self.inputTextField.rx.text.orEmpty
         .throttle(1.0, scheduler: MainScheduler.instance)
