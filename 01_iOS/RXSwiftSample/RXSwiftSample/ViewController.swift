@@ -13,6 +13,7 @@ import RxCocoa
 enum CellIdentifier: String {
     case addingNumber = "addingNumber"
     case simpleValidation = "simpleValidation"
+    case githubSignup = "GitHubSignup"
 }
 
 class ViewController: UIViewController {
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    let order: [CellIdentifier] = [.addingNumber, .simpleValidation]
+    let order: [CellIdentifier] = [.addingNumber, .simpleValidation, .githubSignup]
     
     let disposeBag = DisposeBag()
     
@@ -50,6 +51,10 @@ extension ViewController: UITableViewDelegate {
         } else if indexPath.row == 1 {
             let sb = UIStoryboard(name: "SimpleValidationViewController", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: "SimpleValidationViewController") as? SimpleValidationViewController else { return }
+            navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 2 {
+            let sb = UIStoryboard(name: "FirstGitHubSignupViewController", bundle: nil)
+            guard let vc = sb.instantiateViewController(withIdentifier: "FirstGitHubSignupViewController") as? FirstGitHubSignupViewController else { return }
             navigationController?.pushViewController(vc, animated: true)
         }
     }
