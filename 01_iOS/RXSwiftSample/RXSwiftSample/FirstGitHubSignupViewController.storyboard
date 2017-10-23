@@ -110,6 +110,16 @@ To do this automatically, check out the corresponding `Driver` example.</string>
                     </view>
                     <navigationItem key="navigationItem" title="GitHub Signup" id="Cwl-YW-IkD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="passwordOutlet" destination="kSi-Uf-OwR" id="Lqx-vp-bVh"/>
+                        <outlet property="passwordValidationOutlet" destination="w7z-xW-FLz" id="FyX-T5-vtF"/>
+                        <outlet property="repeatedPasswordOutlet" destination="C3W-qo-PSG" id="VVN-1y-Fdh"/>
+                        <outlet property="repeatedPasswordValidationOutlet" destination="HDF-SC-Wnw" id="yY1-OL-a2i"/>
+                        <outlet property="signingupOutlet" destination="Jyp-VX-hwt" id="Q37-7q-aHB"/>
+                        <outlet property="signupOutlet" destination="kN3-eg-qK4" id="kpR-pG-zpC"/>
+                        <outlet property="usernameOutlet" destination="5st-ss-RHs" id="aEt-iW-dvk"/>
+                        <outlet property="usernameValidationOutlet" destination="Dba-AF-T8S" id="vXD-Bh-cIq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3y6-mR-ROv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
