@@ -36,7 +36,7 @@ extension ValidationResult {
         case .ok:
             return ValidationColors.okColor
         case .empty:
-            retrn .black
+            return .black
         case .validating:
             return .black
         case .failed:
