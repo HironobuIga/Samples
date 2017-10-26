@@ -13,6 +13,7 @@
 		1E54F3641F9E2FDB004A4D20 /* FirstGithubSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54F3631F9E2FDB004A4D20 /* FirstGithubSignupViewModel.swift */; };
 		1E54F3661F9E3118004A4D20 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54F3651F9E3118004A4D20 /* Protocols.swift */; };
 		1E54F3681F9F89DF004A4D20 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54F3671F9F89DF004A4D20 /* BindingExtensions.swift */; };
+		1E54F36A1FA221A9004A4D20 /* DefaultImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54F3691FA221A9004A4D20 /* DefaultImplementation.swift */; };
 		1ECAC9091F89E62000E80D07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAC9081F89E62000E80D07 /* AppDelegate.swift */; };
 		1ECAC90B1F89E62000E80D07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAC90A1F89E62000E80D07 /* ViewController.swift */; };
 		1ECAC90E1F89E62000E80D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECAC90C1F89E62000E80D07 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		1E54F3631F9E2FDB004A4D20 /* FirstGithubSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGithubSignupViewModel.swift; sourceTree = "<group>"; };
 		1E54F3651F9E3118004A4D20 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		1E54F3671F9F89DF004A4D20 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
+		1E54F3691FA221A9004A4D20 /* DefaultImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImplementation.swift; sourceTree = "<group>"; };
 		1ECAC9051F89E62000E80D07 /* RXSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ECAC9081F89E62000E80D07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ECAC90A1F89E62000E80D07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				1E54F3651F9E3118004A4D20 /* Protocols.swift */,
 				1E54F3601F98F0B9004A4D20 /* FirstGitHubSignupViewController.storyboard */,
 				1E54F3671F9F89DF004A4D20 /* BindingExtensions.swift */,
+				1E54F3691FA221A9004A4D20 /* DefaultImplementation.swift */,
 			);
 			path = RXSwiftSample;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				1ECAC90B1F89E62000E80D07 /* ViewController.swift in Sources */,
 				1ECAC9091F89E62000E80D07 /* AppDelegate.swift in Sources */,
 				1E54F3681F9F89DF004A4D20 /* BindingExtensions.swift in Sources */,
+				1E54F36A1FA221A9004A4D20 /* DefaultImplementation.swift in Sources */,
 				1E54F35C1F98EFA8004A4D20 /* FirstGitHubSignupViewController.swift in Sources */,
 				1ECAC92D1F8C0DDD00E80D07 /* SimpleValidationViewController.swift in Sources */,
 			);
