@@ -10,24 +10,30 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-//class FirstGithubSignupViewModel {
-//    let validatedUsername: Observable<ValidationResult>
-//    let validatedPassword: Observable<ValidationResult>
-//    let validatedPasswordRepeated: Observable<ValidationResult>
-//
-//    let signupEnabled: Observable<Bool>
-//    let signedIn: Observable<Bool>
-//    let signingIn: Observable<Bool>
+import class Foundation.URLSession
+import class Foundation.OperationQueue
+import enum Foundation.QualityOfService
 
-//    init(input:(username: Observable<String>, password: Observable<String>,
-//        repeatedPassword: Observable<String>, loginTaps: Observable<Void>
-//        ),
-//         dependency:(API: GitHubAPI,
-//        validationService: GitHubValidationService,
-//        wireframe: Wireframe
-//        )) {
-//        let API = dependency
-//    }
+class FirstGitHubSIgnupViewModel {
+    let validatedUsername: Observable<ValidationResult>
+    let ValidatedPassword: Observable<ValidationResult>
+    let validatedPasswordRepeated: Observable<ValidationResult>
     
-//}
-
+    let signupEnabled: Observable<Bool>
+    let signIn: Observable<Bool>
+    let signingIn: Observable<Bool>
+    
+    init(input:(
+        username: Observable<String>,
+        passsword: Observable<String>,
+        repeatedPassword: Observable<String>,
+        loginTaps: Observable<Void>
+        ),
+         dependency:(
+        API: GitHubAPI,
+        validationService: GitHubValidationService,
+        wireframe: Wireframe))
+        {
+        
+    }
+}
