@@ -16,7 +16,7 @@ import enum Foundation.QualityOfService
 
 class FirstGitHubSIgnupViewModel {
     let validatedUsername: Observable<ValidationResult>
-    let ValidatedPassword: Observable<ValidationResult>
+    let validatedPassword: Observable<ValidationResult>
     let validatedPasswordRepeated: Observable<ValidationResult>
     
     let signupEnabled: Observable<Bool>
@@ -34,6 +34,28 @@ class FirstGitHubSIgnupViewModel {
         validationService: GitHubValidationService,
         wireframe: Wireframe))
         {
-        
+            let API = dependency.API
+            let validationService = dependency.validationService
+            let wireframe = dependency.wireframe
+            
+            validatedUsername = input.username
+                .flatMap{ username in
+                    return validationService.validateUsername(username)
+                    .observeOn(MainScheduler.instance)
+                        .catchErrorJustReturn(.failed(message: "Error contacting server"))
+                }
+            .share(replay: 1)
+            
+            validatedPassword = input.passsword
+                .map({ password in
+                    return validationService.validatePassword(password)
+                })
+            .share(replay: 1)
+            
+            validatedPasswordRepeated = Observable.combineLatest(input.passsword, input.repeatedPassword, resultSelector: validationService.validateRepeatedPassword)
+            .share(replay: 1)
+            
+            let signingIn = ActivityIndicat
+)
     }
 }
