@@ -12,15 +12,40 @@ public class Preferences {
             UserDefaults.standard.set(value, forKey: "hoge")
         }
     }
+    
+    public var someSettingValue: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "someSettingValue")
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "someSettingValue")
+        }
+    }
 }
+
+
 
 public class Preferences2 {
     public var hogeValue: Int = 0
     public var otherHogeValue: Int = 42
 }
 
+public class Sample: NSObject {
+    public var sampleInt = 32
+    public var sampleString = "sample"
+}
+let mirror = Mirror(reflecting: Sample())
+print(mirror.displayStyle)
+print(mirror.subjectType)
+print(mirror.superclassMirror)
+mirror.children.map{ print($0) }
+
 let p = Preferences2()
 let m = Mirror(reflecting: p)
+
+
+
+print()
 
 for c in m.children {
     print(c.label ?? "" + "=>" + String(describing: c.value))
@@ -33,30 +58,24 @@ public class Preferences3: NSObject {
     
     override init() {
         super.init()
-        for c in Mirror(reflecting: self).children {
-            guard let key = c.label else {
-                continue
-            }
+        for child in Mirror(reflecting: self).children {
+            guard let key = child.label else { continue }
             self.setValue(UserDefaults.standard.object(forKey: key), forKey: key)
             self.addObserver(self, forKeyPath: key, options: .new, context: nil)
         }
     }
     
     deinit {
-        for c in Mirror(reflecting: self).children {
-            guard let key = c.label else {
-                continue
-            }
+        for child in Mirror(reflecting: self).children {
+            guard let key = child.label else { continue }
             self.removeObserver(self, forKeyPath: key)
         }
     }
     
     public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         var found = false
-        for c in Mirror(reflecting: self).children {
-            guard let key = c.label else {
-                continue
-            }
+        for child in Mirror(reflecting: self).children {
+            guard let key = child.label else { continue }
             if (key == keyPath) {
                 UserDefaults.standard.set(change?[NSKeyValueChangeKey.newKey], forKey: key)
                 found = true
@@ -69,3 +88,8 @@ public class Preferences3: NSObject {
          }
     }
 }
+
+let preference3 = Preferences3()
+preference3.someStringValue = "aaa"
+print(preference3.someStringValue)
+print(UserDefaults.standard.string(forKey: "someStringValue"))
