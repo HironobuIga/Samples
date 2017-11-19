@@ -88,8 +88,3 @@ public class Preferences3: NSObject {
          }
     }
 }
-
-let preference3 = Preferences3()
-preference3.someStringValue = "aaa"
-print(preference3.someStringValue)
-print(UserDefaults.standard.string(forKey: "someStringValue"))
