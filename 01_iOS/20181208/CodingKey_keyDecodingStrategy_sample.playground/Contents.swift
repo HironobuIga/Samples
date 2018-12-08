@@ -13,7 +13,9 @@ struct User: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case firstName
-        case lastName = "familyName"
+        
+//        case lastName = "family_name" // A こちらの定義ではパースに失敗
+        case lastName = "familyName" // B こちらの定義ではパースに成功
     }
 }
 
